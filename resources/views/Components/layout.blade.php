@@ -29,17 +29,13 @@
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
-                                <x-nav-link href="/"> 
-                                    Home
-                                </x-nav-link>
+                                <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
 
-                                <x-nav-link href="/contact">
-                                    Contact
-                                </x-nav-link>
+                                <x-nav-link href="about" :active="request()->is('about')">About</x-nav-link>
 
-                                <x-nav-link href="/about"> 
-                                    About
-                                </x-nav-link>
+                               <x-nav-link href="contact" :active="request()->is('contact')">Contact</x-nav-link>
+                            
+                               <x-nav-link href="jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
 
                             </div>
                         </div>
@@ -99,7 +95,9 @@
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">About</a>
                     <a href="/contact"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</a>
-                </div>
+                 <a href="/jobs"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Jobs</a>
+                    </div>
                 <div class="border-t border-white/10 pt-4 pb-3">
                     <div class="flex items-center px-5">
                         <div class="shrink-0">
